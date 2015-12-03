@@ -17,7 +17,6 @@ Source0:        https://pypi.python.org/packages/source/o/%{pypi_name}/%{pypi_na
 BuildArch:      noarch
  
 
-
 %description
 This library contains Windows / Hyper-V code commonly used in the OpenStack
 projects: nova, cinder, networking-hyperv. The library can be used in any
@@ -27,6 +26,7 @@ other OpenStack projects where it is needed.
 Summary:        Windows / Hyper-V library for OpenStack projects
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
+Requires: python-eventlet >= 0.17.4
 Requires: python-oslo-concurrency >= 2.3.0
 Requires: python-oslo-config >= 2.3.0
 Requires: python-oslo-log >= 1.8.0
@@ -49,6 +49,7 @@ other OpenStack projects where it is needed.
 Summary:        Windows / Hyper-V library for OpenStack projects
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
+Requires: python3-eventlet >= 0.17.4
 Requires: python3-oslo-concurrency >= 2.3.0
 Requires: python3-oslo-config >= 2.3.0
 Requires: python3-oslo-log >= 1.8.0
