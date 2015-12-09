@@ -70,15 +70,12 @@ other OpenStack projects where it is needed.
 
 %package -n python-%{pypi_name}-doc
 Summary:        Windows / Hyper-V library for OpenStack projects - documentation
-%{?python_provide:%python_provide python2-%{pypi_name}}
 
 %description -n python-%{pypi_name}-doc
 Documentation for the Windows / Hyper-V library for OpenStack projects
 
 %prep
 %setup -q -n %{pypi_name}-%{upstream_version}
-# Remove bundled egg-info
-rm -rf %{pypi_name}.egg-info
 
 %build
 %py2_build
