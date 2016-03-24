@@ -1,3 +1,4 @@
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global pypi_name os-win
 %global pyname os_win
 
@@ -7,13 +8,13 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        0.3.2
+Release:        1%{?dist}
 Summary:        Windows / Hyper-V library for OpenStack projects
 
 License:        ASL 2.0
 URL:            http://www.cloudbase.it/
-Source0:        https://pypi.python.org/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://pypi.python.org/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}%{?milestone}.tar.gz
 BuildArch:      noarch
  
 
@@ -112,3 +113,5 @@ rm -rf html/.{doctrees,buildinfo}
 %license LICENSE
 
 %changelog
+* Thu Mar 24 2016 RDO <rdo-list@redhat.com> 0.3.2-0.1
+-  Rebuild for Mitaka 0.3.2
