@@ -8,8 +8,8 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        1.2.0
+Release:        1%{?dist}
 Summary:        Windows / Hyper-V library for OpenStack projects
 
 License:        ASL 2.0
@@ -113,3 +113,6 @@ rm -rf html/.{doctrees,buildinfo}
 %license LICENSE
 
 %changelog
+* Wed Sep 14 2016 Haikel Guemar <hguemar@fedoraproject.org> 1.2.0-1
+- Update to 1.2.0
+
