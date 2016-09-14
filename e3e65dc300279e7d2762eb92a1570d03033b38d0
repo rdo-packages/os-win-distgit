@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_9d83f4cb",
+        "filename": "python-os-win.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-09-14T14:13:36Z",
+      "side": 1,
+      "message": "upstream_version?",
+      "range": {
+        "startLine": 17,
+        "startChar": 75,
+        "endLine": 17,
+        "endChar": 83
+      },
+      "revId": "e3e65dc300279e7d2762eb92a1570d03033b38d0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
