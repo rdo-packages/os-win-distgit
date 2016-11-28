@@ -4,7 +4,7 @@
 
 # There are some dependency packages without a python3 build
 %if 0%{?fedora}
-%global with_python3 0
+%global with_python3 1
 %endif
 
 Name:           python-%{pypi_name}
