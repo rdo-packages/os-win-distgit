@@ -115,3 +115,4 @@ rm -rf html/.{doctrees,buildinfo}
 %license LICENSE
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/os-win/commit/?id=d396f0ffd4e44aa3a2e16b684d5fec5ea83718bc
