@@ -1,6 +1,9 @@
-# UUID                                  	Group Name
-#
-4b948d6d8dbe3ede4b2e6ab201b20a8484ff5f0f	openstack/os-win-distgit-core
-63673ea7f2ae6a5666566b1ea9f14e473d00f5a9	rdo-core
-f2f8bc98ff7d23bb628cbbc1600411d70fed7eda	openstack/os-win-distgit-ptl
-global:Registered-Users                 	Registered Users
+# UUID Group Name
+global:Registered-Users	Registered Users
+7d3cc09268ee8780f3a6aa349ae5017731a4e509	openstack/os-win-core
+4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
+global:Anonymous-Users	Anonymous Users
+96a3cdf082dd96979c0811cbf4d9ad1158335b8d	openstack/os-win-ptl
+05a678d3d4a168e149d5e8a0063bbd1b1c5526da	Administrators
+401cf37bee35d1c809d4d957e55f2a304f8eed69	rdo-provenpackagers
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Non-Interactive Users
