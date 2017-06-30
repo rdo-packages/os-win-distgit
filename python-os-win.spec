@@ -8,7 +8,7 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        1.2.1
+Version:        1.2.2
 Release:        1%{?dist}
 Summary:        Windows / Hyper-V library for OpenStack projects
 
@@ -113,6 +113,9 @@ rm -rf html/.{doctrees,buildinfo}
 %license LICENSE
 
 %changelog
+* Fri Jun 30 2017 rdo-trunk <javier.pena@redhat.com> 1.2.2-1
+- Update to 1.2.2
+
 * Thu Oct 13 2016 Alfredo Moralejo <amoralej@redhat.com> 1.2.1-1
 - Update to 1.2.1
 
