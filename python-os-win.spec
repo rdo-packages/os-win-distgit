@@ -27,6 +27,7 @@ other OpenStack projects where it is needed.
 Summary:        Windows / Hyper-V library for OpenStack projects
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
+BuildRequires: openstack-macros
 Requires: python-pbr >= 2.0.0
 Requires: python-babel >= 2.3.4
 Requires: python-eventlet >= 0.18.2
@@ -51,6 +52,7 @@ other OpenStack projects where it is needed.
 Summary:        Windows / Hyper-V library for OpenStack projects
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
+BuildRequires: openstack-macros
 Requires: python3-pbr >= 2.0.0
 Requires: python3-babel >= 2.3.4
 Requires: python3-eventlet >= 0.18.2
@@ -79,6 +81,9 @@ Documentation for the Windows / Hyper-V library for OpenStack projects
 
 %prep
 %setup -q -n %{pypi_name}-%{upstream_version}
+
+# let RPM handle deps
+%py_req_cleanup
 
 %build
 %py2_build
