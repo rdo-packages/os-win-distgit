@@ -80,6 +80,9 @@ Documentation for the Windows / Hyper-V library for OpenStack projects
 %prep
 %setup -q -n %{pypi_name}-%{upstream_version}
 
+# let RPM handle deps
+rm -rf {test-,}requirements.txt
+
 %build
 %py2_build
 %if 0%{?with_python3}
