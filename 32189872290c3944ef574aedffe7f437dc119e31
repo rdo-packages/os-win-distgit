@@ -16,6 +16,24 @@
       "revId": "32189872290c3944ef574aedffe7f437dc119e31",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a890539_5926c9b8",
+        "filename": "python-os-win.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 371
+      },
+      "writtenOn": "2017-09-05T12:02:21Z",
+      "side": 1,
+      "message": "Maybe it would worth to mention the reason why we added it: to avoid adding these two requirements that exist only on win32 platform.",
+      "parentUuid": "5a890539_e273424b",
+      "revId": "32189872290c3944ef574aedffe7f437dc119e31",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
