@@ -34,6 +34,24 @@
       "revId": "32189872290c3944ef574aedffe7f437dc119e31",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a890539_993751e3",
+        "filename": "python-os-win.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-05T12:11:24Z",
+      "side": 1,
+      "message": "Commit message show a lot of details, but this seems to be a common pattern in python packages to remove requirements/test-requirements in the prep section.  Would not be opposed to a little more verbose details.\n\nlet .spec maintain deps, two windows only deps are also included in the requirements.txt",
+      "parentUuid": "5a890539_5926c9b8",
+      "revId": "32189872290c3944ef574aedffe7f437dc119e31",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
