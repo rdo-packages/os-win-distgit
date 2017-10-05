@@ -7,6 +7,11 @@
 %global with_python3 1
 %endif
 
+%global common_desc \
+This library contains Windows / Hyper-V code commonly used in the OpenStack \
+projects: nova, cinder, networking-hyperv. The library can be used in any \
+other OpenStack projects where it is needed.
+
 Name:           python-%{pypi_name}
 Version:        XXX
 Release:        XXX
@@ -19,9 +24,7 @@ BuildArch:      noarch
  
 
 %description
-This library contains Windows / Hyper-V code commonly used in the OpenStack
-projects: nova, cinder, networking-hyperv. The library can be used in any
-other OpenStack projects where it is needed.
+%{common_desc}
 
 %package -n python2-%{pypi_name}
 Summary:        Windows / Hyper-V library for OpenStack projects
@@ -43,9 +46,7 @@ BuildRequires:  python-sphinx
 BuildRequires:  python-oslo-sphinx
 
 %description -n python2-%{pypi_name}
-This library contains Windows / Hyper-V code commonly used in the OpenStack
-projects: nova, cinder, networking-hyperv. The library can be used in any
-other OpenStack projects where it is needed.
+%{common_desc}
 
 %if 0%{?with_python3}
 %package -n python3-%{pypi_name}
@@ -68,9 +69,7 @@ BuildRequires:  python3-sphinx
 BuildRequires:  python3-oslo-sphinx
 
 %description -n python3-%{pypi_name}
-This library contains Windows / Hyper-V code commonly used in the OpenStack
-projects: nova, cinder, networking-hyperv. The library can be used in any
-other OpenStack projects where it is needed.
+%{common_desc}
 %endif
 
 %package -n python-%{pypi_name}-doc
