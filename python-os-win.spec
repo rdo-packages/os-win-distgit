@@ -21,7 +21,7 @@ License:        ASL 2.0
 URL:            http://www.cloudbase.it/
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
- 
+
 
 %description
 %{common_desc}
@@ -40,9 +40,12 @@ Requires: python-oslo-log >= 3.22.0
 Requires: python-oslo-utils >= 3.20.0
 Requires: python-oslo-i18n >= 2.1.0
 
+BuildRequires:  git
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  python-sphinx
+# FIXME(jpena): remove once a version with https://review.openstack.org/518951
+# is released
 BuildRequires:  python-oslo-sphinx
 
 %description -n python2-%{pypi_name}
@@ -66,6 +69,8 @@ Requires: python3-oslo-i18n >= 2.1.0
 BuildRequires:  python3-devel
 BuildRequires:  python3-pbr
 BuildRequires:  python3-sphinx
+# FIXME(jpena): remove once a version with https://review.openstack.org/518951
+# is released
 BuildRequires:  python3-oslo-sphinx
 
 %description -n python3-%{pypi_name}
@@ -74,12 +79,15 @@ BuildRequires:  python3-oslo-sphinx
 
 %package -n python-%{pypi_name}-doc
 Summary:        Windows / Hyper-V library for OpenStack projects - documentation
+BuildRequires: python-openstackdocstheme
+BuildRequires: python-oslo-config
+
 
 %description -n python-%{pypi_name}-doc
 Documentation for the Windows / Hyper-V library for OpenStack projects
 
 %prep
-%setup -q -n %{pypi_name}-%{upstream_version}
+%autosetup -n %{pypi_name}-%{upstream_version} -S git
 
 # let RPM handle deps
 %py_req_cleanup
@@ -90,8 +98,8 @@ Documentation for the Windows / Hyper-V library for OpenStack projects
 %py3_build
 %endif
 
-# generate html docs 
-sphinx-build doc/source html
+# generate html docs
+%{__python2} setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
 rm -rf html/.{doctrees,buildinfo}
 
@@ -103,19 +111,19 @@ rm -rf html/.{doctrees,buildinfo}
 %endif
 
 %files -n python2-%{pypi_name}
-%doc doc/source/readme.rst README.rst 
+%doc doc/source/readme.rst README.rst
 %license LICENSE
 %{python2_sitelib}/%{pyname}*
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
 %license LICENSE
-%doc doc/source/readme.rst README.rst 
+%doc doc/source/readme.rst README.rst
 %{python3_sitelib}/%{pyname}*
 %endif
 
 %files -n python-%{pypi_name}-doc
-%doc html
+%doc doc/build/html
 %license LICENSE
 
 %changelog
