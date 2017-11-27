@@ -42,8 +42,6 @@ Requires: python-oslo-i18n >= 2.1.0
 
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
-BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx
 
 %description -n python2-%{pypi_name}
 %{common_desc}
@@ -74,6 +72,9 @@ BuildRequires:  python3-oslo-sphinx
 
 %package -n python-%{pypi_name}-doc
 Summary:        Windows / Hyper-V library for OpenStack projects - documentation
+BuildRequires:  python-sphinx
+BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-oslo-config
 
 %description -n python-%{pypi_name}-doc
 Documentation for the Windows / Hyper-V library for OpenStack projects
