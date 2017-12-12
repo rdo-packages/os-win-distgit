@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba7be1f8_f4b87d2c",
+        "filename": "python-os-win.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-12-12T07:50:38Z",
+      "side": 1,
+      "message": "Unrelated, but os-win 2.6.0 is released, so we could remove oslo-sphinx as a BR.",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 34
+      },
+      "revId": "3bc1fec6d68f28daa3f44fd92b04cffad1676e4c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
