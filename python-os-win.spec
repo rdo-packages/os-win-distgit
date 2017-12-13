@@ -44,9 +44,6 @@ Requires: python-oslo-i18n >= 2.1.0
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  python-sphinx
-# FIXME(jpena): remove once a version with https://review.openstack.org/518951
-# is released
-BuildRequires:  python-oslo-sphinx
 BuildRequires:  python-eventlet >= 0.18.2
 
 %description -n python2-%{pypi_name}
@@ -69,9 +66,6 @@ Requires: python3-oslo-i18n >= 2.1.0
 BuildRequires:  python3-devel
 BuildRequires:  python3-pbr
 BuildRequires:  python3-sphinx
-# FIXME(jpena): remove once a version with https://review.openstack.org/518951
-# is released
-BuildRequires:  python3-oslo-sphinx
 BuildRequires:  python3-eventlet >= 0.18.2
 
 %description -n python3-%{pypi_name}
