@@ -32,19 +32,19 @@ BuildRequires: openstack-macros
 Summary:        Windows / Hyper-V library for OpenStack projects
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
-Requires: python-pbr >= 2.0.0
-Requires: python-babel >= 2.3.4
-Requires: python-eventlet >= 0.18.2
-Requires: python-oslo-concurrency >= 3.8.0
-Requires: python-oslo-config >= 2:4.0.0
-Requires: python-oslo-log >= 3.22.0
-Requires: python-oslo-utils >= 3.20.0
-Requires: python-oslo-i18n >= 2.1.0
+Requires: python2-pbr >= 2.0.0
+Requires: python2-babel >= 2.3.4
+Requires: python2-eventlet >= 0.18.2
+Requires: python2-oslo-concurrency >= 3.25.0
+Requires: python2-oslo-config >= 2:5.1.0
+Requires: python2-oslo-log >= 3.36.0
+Requires: python2-oslo-utils >= 3.33.0
+Requires: python2-oslo-i18n >= 3.15.3
 
 BuildRequires:  python2-devel
-BuildRequires:  python-pbr
-BuildRequires:  python-sphinx
-BuildRequires:  python-eventlet >= 0.18.2
+BuildRequires:  python2-pbr
+BuildRequires:  python2-sphinx
+BuildRequires:  python2-eventlet >= 0.18.2
 
 %description -n python2-%{pypi_name}
 %{common_desc}
@@ -57,11 +57,11 @@ Summary:        Windows / Hyper-V library for OpenStack projects
 Requires: python3-pbr >= 2.0.0
 Requires: python3-babel >= 2.3.4
 Requires: python3-eventlet >= 0.18.2
-Requires: python3-oslo-concurrency >= 3.8.0
-Requires: python3-oslo-config >= 2:4.0.0
-Requires: python3-oslo-log >= 3.22.0
-Requires: python3-oslo-utils >= 3.20.0
-Requires: python3-oslo-i18n >= 2.1.0
+Requires: python3-oslo-concurrency >= 3.25.0
+Requires: python3-oslo-config >= 2:5.1.0
+Requires: python3-oslo-log >= 3.36.0
+Requires: python3-oslo-utils >= 3.33.0
+Requires: python3-oslo-i18n >= 3.15.3
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-pbr
