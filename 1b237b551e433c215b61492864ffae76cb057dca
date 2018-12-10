@@ -1,0 +1,9 @@
+Code-Review+2: Javier Peña <jpena@redhat.com>
+Code-Review+2: hguemar <hguemar@fedoraproject.org>
+Workflow+1: hguemar <hguemar@fedoraproject.org>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Mon, 10 Dec 2018 15:12:45 +0000
+Reviewed-on: https://review.rdoproject.org/r/17670
+Project: openstack/os-win-distgit
+Branch: refs/heads/rpm-master
