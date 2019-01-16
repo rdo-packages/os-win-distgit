@@ -13,6 +13,8 @@
 %global pypi_name os-win
 %global pyname os_win
 
+%global with_doc 1
+
 %global common_desc \
 This library contains Windows / Hyper-V code commonly used in the OpenStack \
 projects: nova, cinder, networking-hyperv. The library can be used in any \
@@ -49,20 +51,22 @@ Requires: python%{pyver}-oslo-i18n >= 3.15.3
 
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-pbr
-BuildRequires:  python%{pyver}-sphinx
+
 BuildRequires:  python%{pyver}-eventlet >= 0.18.2
 
 %description -n python%{pyver}-%{pypi_name}
 %{common_desc}
 
+%if 0%{?with_doc}
 %package -n python-%{pypi_name}-doc
 Summary:        Windows / Hyper-V library for OpenStack projects - documentation
-BuildRequires: python%{pyver}-openstackdocstheme
-BuildRequires: python%{pyver}-oslo-config
-
+BuildRequires:  python%{pyver}-openstackdocstheme
+BuildRequires:  python%{pyver}-oslo-config
+BuildRequires:  python%{pyver}-sphinx
 
 %description -n python-%{pypi_name}-doc
 Documentation for the Windows / Hyper-V library for OpenStack projects
+%endif
 
 %prep
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
@@ -73,11 +77,12 @@ Documentation for the Windows / Hyper-V library for OpenStack projects
 %build
 %{pyver_build}
 
+%if 0%{?with_doc}
 # generate html docs
 %{pyver_bin} setup.py build_sphinx -b html
 # remove the sphinx-build-%{pyver} leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
-
+%endif
 
 %install
 %{pyver_install}
@@ -87,8 +92,10 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %license LICENSE
 %{pyver_sitelib}/%{pyname}*
 
+%if 0%{?with_doc}
 %files -n python-%{pypi_name}-doc
 %doc doc/build/html
 %license LICENSE
+%endif
 
 %changelog
