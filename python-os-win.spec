@@ -10,7 +10,7 @@ projects: nova, cinder, networking-hyperv. The library can be used in any \
 other OpenStack projects where it is needed.
 
 Name:           python-%{pypi_name}
-Version:        5.0.1
+Version:        5.0.2
 Release:        1%{?dist}
 Summary:        Windows / Hyper-V library for OpenStack projects
 
@@ -88,6 +88,9 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Fri May 22 2020 RDO <dev@lists.rdoproject.org> 5.0.2-1
+- Update to 5.0.2
+
 * Fri Apr 24 2020 RDO <dev@lists.rdoproject.org> 5.0.1-1
 - Update to 5.0.1
 
