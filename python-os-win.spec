@@ -1,3 +1,5 @@
+%{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
+%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global pypi_name os-win
 %global pyname os_win
@@ -11,13 +13,23 @@ other OpenStack projects where it is needed.
 
 Name:           python-%{pypi_name}
 Version:        5.1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Windows / Hyper-V library for OpenStack projects
 
 License:        ASL 2.0
 URL:            http://www.cloudbase.it/
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+Source101:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{version}.tar.gz.asc
+Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
+%endif
 BuildArch:      noarch
+
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+BuildRequires:  /usr/bin/gpgv2
+%endif
 
 BuildRequires: git
 BuildRequires: openstack-macros
@@ -58,6 +70,10 @@ Documentation for the Windows / Hyper-V library for OpenStack projects
 %endif
 
 %prep
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+%{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
+%endif
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
 
 # let RPM handle deps
@@ -88,6 +104,9 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Wed Oct 21 2020 Joel Capitao <jcapitao@redhat.com> 5.1.0-2
+- Enable sources tarball validation using GPG signature.
+
 * Fri Sep 18 2020 RDO <dev@lists.rdoproject.org> 5.1.0-1
 - Update to 5.1.0
 
