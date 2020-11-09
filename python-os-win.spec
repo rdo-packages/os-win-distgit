@@ -12,8 +12,8 @@ projects: nova, cinder, networking-hyperv. The library can be used in any \
 other OpenStack projects where it is needed.
 
 Name:           python-%{pypi_name}
-Version:        5.1.0
-Release:        2%{?dist}
+Version:        5.2.0
+Release:        1%{?dist}
 Summary:        Windows / Hyper-V library for OpenStack projects
 
 License:        ASL 2.0
@@ -104,6 +104,9 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Mon Nov 09 2020 RDO <dev@lists.rdoproject.org> 5.2.0-1
+- Update to 5.2.0
+
 * Wed Oct 21 2020 Joel Capitao <jcapitao@redhat.com> 5.1.0-2
 - Enable sources tarball validation using GPG signature.
 
