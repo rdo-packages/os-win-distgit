@@ -44,7 +44,7 @@ Summary:        Windows / Hyper-V library for OpenStack projects
 Requires: python3-pbr >= 2.0.0
 Requires: python3-eventlet >= 0.22.0
 Requires: python3-oslo-concurrency >= 3.29.0
-Requires: python3-oslo-config >= 2:5.2.0
+Requires: python3-oslo-config >= 2:6.8.0
 Requires: python3-oslo-log >= 3.36.0
 Requires: python3-oslo-utils >= 4.7.0
 Requires: python3-oslo-i18n >= 3.15.3
