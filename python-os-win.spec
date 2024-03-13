@@ -115,3 +115,4 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/os-win/commit/318b1052d30baf7a11335399941c211c553b8c7a
