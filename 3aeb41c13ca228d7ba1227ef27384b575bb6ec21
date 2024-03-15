@@ -16,6 +16,24 @@
       "message": "As it\u0027s retired upstream [1] since first build, DLRN cannot create tarball properly.\nTo fix this we need to pin os-win in tags/caracal.yml as we do in caracal-uc.yml\n\n[1] https://opendev.org/openstack/os-win/",
       "revId": "3aeb41c13ca228d7ba1227ef27384b575bb6ec21",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b2d64c7_e3dc9fcc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-03-15T13:54:14Z",
+      "side": 1,
+      "message": "the other option is to wait for the switch of RDO master to Dalmatian release",
+      "parentUuid": "29d37621_be214244",
+      "revId": "3aeb41c13ca228d7ba1227ef27384b575bb6ec21",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
