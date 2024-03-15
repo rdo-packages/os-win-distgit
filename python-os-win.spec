@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0xa7475c5f2122fec3f90343223fe3bf5aad1080e4
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
@@ -19,8 +19,8 @@ projects: nova, cinder, networking-hyperv. The library can be used in any \
 other OpenStack projects where it is needed.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        5.9.0
+Release:        2%{?dist}
 Summary:        Windows / Hyper-V library for OpenStack projects
 
 License:        Apache-2.0
@@ -115,3 +115,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Fri Mar 15 2024 RDO <dev@lists.rdoproject.org> 5.9.0-2
+- Rebuild 5.9.0 in Caracal
+
