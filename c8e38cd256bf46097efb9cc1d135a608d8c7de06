@@ -16,6 +16,23 @@
       "message": "project is retired upstream so fails in building master. Note this is ci issue only as in rdo trunk it will follow dalmatian-uc.\nSame behavior as https://review.rdoproject.org/r/c/openstack/os-win-distgit/+/52271",
       "revId": "c8e38cd256bf46097efb9cc1d135a608d8c7de06",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfe3f97e_70a9bd63",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-09-23T09:55:37Z",
+      "side": 1,
+      "message": "the commands below were executed manually:\ncbs add-pkg cloud9s-openstack-dalmatian-candidate python-os-win --owner\u003drdobuilder  \ncbs tag-build  cloud9s-openstack-dalmatian-candidate python-os-win-5.9.0-2.el9s",
+      "revId": "c8e38cd256bf46097efb9cc1d135a608d8c7de06",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ],
   "submitRequirementResults": []
