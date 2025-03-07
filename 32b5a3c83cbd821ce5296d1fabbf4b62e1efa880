@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "abc97b7e_bc7a5bae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-03-07T10:22:30Z",
+      "side": 1,
+      "message": "HEAD is now at 83dc573 Retire os-win: remove repo content\n\ntarball is generated with empty content as the project was retired.\nWe have 2 options:\n1. Move to Zuul \"pin\" job\n2. Force merge the patch (it\u0027s working locally from tag 5.9.0)\n\nAs there is no more development for this project, I think it\u0027s better to ninja merge.",
+      "revId": "32b5a3c83cbd821ce5296d1fabbf4b62e1efa880",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
